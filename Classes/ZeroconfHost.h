@@ -1,5 +1,5 @@
 //
-//  FFZeroconfHost.h
+//  ZeroconfHost.h
 //
 //
 //  Created by Ades on 31/08/2015.
@@ -31,7 +31,7 @@
 
 
 
-@interface FFZeroconfHost : NSObject <NSNetServiceDelegate>
+@interface ZeroconfHost : NSObject <NSNetServiceDelegate>
 
 
 

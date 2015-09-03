@@ -1,6 +1,6 @@
 ZeroConfig
 
-Version 1.0.5, August 31th, 2015
+Version 1.0.6, August 31th, 2015
 
 Copyright (C) 2015 Raphaël Pinto
 

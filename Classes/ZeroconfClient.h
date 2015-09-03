@@ -30,7 +30,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface FFZeroconfClient : NSObject <NSNetServiceBrowserDelegate, NSNetServiceDelegate>
+@interface ZeroconfClient : NSObject <NSNetServiceBrowserDelegate, NSNetServiceDelegate>
 
 
 + (void)startBrowsingWithServiceType:(NSString*)serviceType

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Zeroconf"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "Zeroconf netork discovery "
 
   s.description  = <<-DESC
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/rapinto/Zeroconf.git", :tag => "1.0.5" }
+  s.source       = { :git => "https://github.com/rapinto/Zeroconf.git", :tag => "1.0.6" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

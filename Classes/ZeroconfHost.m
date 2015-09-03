@@ -1,5 +1,5 @@
 //
-//  FFZeroconfHost.m
+//  ZeroconfHost.m
 //
 //
 //  Created by Ades on 31/08/2015.
@@ -27,15 +27,12 @@
 
 
 
-#import "FFZeroconfHost.h"
+#import "ZeroconfHost.h"
 #import <UIKit/UIApplication.h>
 
 
 
-@protocol FFZeroconfHostDelegate;
-
-
-@interface FFZeroconfHost ()
+@interface ZeroconfHost ()
 
 
 @property (strong, nonatomic) NSNetService *service;
@@ -46,7 +43,7 @@
 
 
 
-@implementation FFZeroconfHost
+@implementation ZeroconfHost
 
 
 
@@ -56,15 +53,15 @@
 
 
 
-static FFZeroconfHost* sharedInstance = nil;
+static ZeroconfHost* sharedInstance = nil;
 
 
 
-+ (FFZeroconfHost*)sharedInstance
++ (ZeroconfHost*)sharedInstance
 {
     if (sharedInstance == nil)
     {
-        sharedInstance = [[FFZeroconfHost alloc] init];
+        sharedInstance = [[ZeroconfHost alloc] init];
     }
     return sharedInstance;
 }
@@ -91,11 +88,11 @@ static FFZeroconfHost* sharedInstance = nil;
                                     port:(int)port
                                 delegate:(id<NSNetServiceDelegate>)delegate
 {
-    [FFZeroconfHost sharedInstance].delegate = delegate;
-    [[FFZeroconfHost sharedInstance] startBroadcastingWithServiceType:serviceType
-                                                             inDomain:domain
-                                                          serviceName:serviceName
-                                                                 port:port];
+    [ZeroconfHost sharedInstance].delegate = delegate;
+    [[ZeroconfHost sharedInstance] startBroadcastingWithServiceType:serviceType
+                                                           inDomain:domain
+                                                        serviceName:serviceName
+                                                               port:port];
 }
 
 
@@ -104,7 +101,7 @@ static FFZeroconfHost* sharedInstance = nil;
     if (sharedInstance != nil)
     {
         [sharedInstance.service stop];
-        [FFZeroconfHost releaseSharedInstance];
+        [ZeroconfHost releaseSharedInstance];
     }
 }
 

@@ -27,13 +27,13 @@
 
 
 
-#import "FFZeroconfClient.h"
+#import "ZeroconfClient.h"
 #import <UIKit/UIApplication.h> 
 #include <arpa/inet.h>
 
 
 
-@interface FFZeroconfClient ()
+@interface ZeroconfClient ()
 
 @property (strong, nonatomic) NSMutableArray* services;
 @property (strong, nonatomic) NSNetServiceBrowser* serviceBrowser;
@@ -46,7 +46,7 @@
 
 
 
-@implementation FFZeroconfClient
+@implementation ZeroconfClient
 
 
 
@@ -55,14 +55,14 @@
 
 
 
-static FFZeroconfClient* sharedInstance = nil;
+static ZeroconfClient* sharedInstance = nil;
 
 
-+ (FFZeroconfClient*)sharedInstance
++ (ZeroconfClient*)sharedInstance
 {
     if (sharedInstance == nil)
     {
-        sharedInstance = [[FFZeroconfClient alloc] init];
+        sharedInstance = [[ZeroconfClient alloc] init];
     }
     
     return sharedInstance;
@@ -125,9 +125,9 @@ static FFZeroconfClient* sharedInstance = nil;
                             inDomain:(NSString*)domain
                             delegate:(id<NSNetServiceBrowserDelegate, NSNetServiceDelegate>)delegate
 {
-    [FFZeroconfClient sharedInstance].delegate = delegate;
-    [[FFZeroconfClient sharedInstance] startBrowsingWithServiceType:serviceType
-                                                           inDomain:domain];
+    [ZeroconfClient sharedInstance].delegate = delegate;
+    [[ZeroconfClient sharedInstance] startBrowsingWithServiceType:serviceType
+                                                         inDomain:domain];
 }
 
 
@@ -135,8 +135,8 @@ static FFZeroconfClient* sharedInstance = nil;
 {
     if (sharedInstance != nil)
     {
-        [[FFZeroconfClient sharedInstance] stopBrowsing];
-        [FFZeroconfClient releaseSharedInstance];
+        [[ZeroconfClient sharedInstance] stopBrowsing];
+        [ZeroconfClient releaseSharedInstance];
     }
 }
 
