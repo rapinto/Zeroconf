@@ -28,7 +28,7 @@
 
 
 #import "FFZeroconfClient.h"
-#import <UIKit/UIApplication.h> 
+#import <UIKit/UIKit.h> 
 #include <arpa/inet.h>
 
 
