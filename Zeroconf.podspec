@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Zeroconf"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "Zeroconf netork discovery "
 
   s.description  = <<-DESC
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "7".0"
+  s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/rapinto/Zeroconf.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/rapinto/Zeroconf.git", :tag => "1.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
