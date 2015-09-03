@@ -28,7 +28,7 @@
 
 
 #import "FFZeroconfHost.h"
-#import <UIKit/UIApplication.h>
+#import <UIKit/UIKit.h>
 
 
 
